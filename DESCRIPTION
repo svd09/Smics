@@ -6,8 +6,8 @@ Author: Salil V Deo MD
 Maintainer: The package maintainer <svd14@case.edu>
 
 Depends: 
-pastecs,
-tidyverse,
+pastecs
+tidyverse
 gmodels
 
 
