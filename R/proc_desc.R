@@ -9,7 +9,7 @@
 #' proc_desc(x)
 #' }
 proc_desc <- function(x){
-  require(pastecs)
+
   result <- round(stat.desc(x),2)
   hist(x, col = "skyblue")
   result
