@@ -1,18 +1,20 @@
-#' A function for EDA of continuous variables
+#' @title A function to provide descriptive statistics.
 #'
-#' This function provides a histogram and important values of your variable.
-#' @param x = your input variable
-#' @keywords
-#' @export
-#' @examples
-#' please install pastecs library before using this function.
+#' @description Provides descriptive statistics as SPSS format.
+#' @param x column in a dataframe
+#' @seealso \code{\link[gmodels]{CrossTable}}
+#' @return NULL
+#' @examples \dontrun{
+#' # do not run this
 #' x = c(1,2,3,4,5,6,7,8,9,10)
-#' proc_desc(x)
+#' proc_tab(x)
+#' }
 
 
 
 proc_tab <- function(x){
-  # require libary(gmodels)
+
   CrossTable(x, format = "SPSS")
+
 
 }

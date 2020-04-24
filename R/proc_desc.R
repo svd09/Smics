@@ -1,14 +1,13 @@
-#' A function for EDA of continuous variables
+#' @title Summary statistics with histogram
 #'
-#' This function provides a histogram and important values of your variable.
-#' @param x = your input variable
+#' @description summary statistics with histogram of a variable.
+#' @param x list,vector,column of a dataframe
 #' @keywords
 #' @export
-#' @examples
-#' please install pastecs library before using this function.
+#' @examples \dontrun{
 #' x = c(1,2,3,4,5,6,7,8,9,10)
 #' proc_desc(x)
-
+#' }
 proc_desc <- function(x){
   # require library(pastecs)
   result <- round(stat.desc(x),2)
