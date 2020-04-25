@@ -1,22 +1,16 @@
 Package: Smisc
 Type: Package
-Title: This is a miscellaneous groups of functions.
+Title: This is a miscellaneous groups of functions
 Version: 0.1.0
 Author: Salil V Deo MD
-Maintainer: The package maintainer <svd14@case.edu>
-
-Depends: 
-pastecs
-tidyverse
-gmodels
-
-
+Maintainer: Salil Deo<svd14@case.edu>
 Description: This package is a compilation of various miscellanous functions
-that I have created while working on projects. The functions are somtimes 
-heavily borrowed from other libraries. I have attempted to cite all the sources
-where possible. If anyone is left out, please attribute that to my dumbness; that 
-was not my intention. As the addage goes: 
+  that I have created while working on projects. The functions are sometimes 
+  heavily borrowed from other libraries. I have attempted to cite all the sources
+  where possible. If anyone is left out, please attribute that to my dumbness; that 
+  was not my intention. As the addage goes: 
     "To look further ... we need to stand on the shoulder of giants.
-License: What license is it under?
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.1.0

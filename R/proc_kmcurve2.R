@@ -4,6 +4,8 @@
 #' @param s survfit object
 #' @param xlab x-axis label
 #' @param ylab y-axis label
+#' @import ggplot2
+#' @import broom
 #' @seealso \code{\link[survival]{survfit}}
 #' @return NULL
 #' @examples \dontrun{
@@ -16,9 +18,10 @@
 
 
 proc_kmcurve2 <- function(s,xlab,ylab){
-  require(tidyverse)
-  require(my_theme)
-  df <- tidy(s) # get the tidy summary suvfit object
+  requireNamespace(ggplot2)
+  requireNamespace(broom)
+  requireNamespace(my_theme)
+  df <- broom::tidy(s) # get the tidy summary suvfit object
   finalt <- max(df$time) # maximum time set for graph
   # start preparing the graph
 

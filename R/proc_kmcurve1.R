@@ -4,6 +4,8 @@
 #' @param s survfit object
 #' @param xlab x-axis label
 #' @param ylab y-axis label
+#' @import ggplot2
+#' @import broom
 #' @param color string providing color label
 #' @seealso \code{\link[survival]{survfit}}
 #' @return NULL
@@ -17,6 +19,9 @@
 #' }
 
 proc_kmcurve1 <- function(s,xlab,ylab,color){
+  requireNamespace(ggplot2)
+  requireNamespace(broom)
+  requireNamespace(my_theme)
   df <- tidy(s) # get the tidy summary suvfit object
   finalt <- max(df$time) # maximum time set for graph
   # start preparing the graph
@@ -28,3 +33,4 @@ proc_kmcurve1 <- function(s,xlab,ylab,color){
   g3 <- g2 + my_theme()
   g3
 }
+
