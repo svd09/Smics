@@ -19,9 +19,9 @@
 #' }
 
 proc_kmcurve1 <- function(s,xlab,ylab,color){
-  requireNamespace(ggplot2)
-  requireNamespace(broom)
-  requireNamespace(my_theme)
+  require(ggplot2)
+  require(broom)
+  require(my_theme)
   df <- tidy(s) # get the tidy summary suvfit object
   finalt <- max(df$time) # maximum time set for graph
   # start preparing the graph
@@ -33,4 +33,5 @@ proc_kmcurve1 <- function(s,xlab,ylab,color){
   g3 <- g2 + my_theme()
   g3
 }
+
 

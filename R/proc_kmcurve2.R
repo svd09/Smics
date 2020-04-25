@@ -18,9 +18,9 @@
 
 
 proc_kmcurve2 <- function(s,xlab,ylab){
-  requireNamespace(ggplot2)
-  requireNamespace(broom)
-  requireNamespace(my_theme)
+  require(ggplot2)
+  require(broom)
+  require(my_theme)
   df <- broom::tidy(s) # get the tidy summary suvfit object
   finalt <- max(df$time) # maximum time set for graph
   # start preparing the graph
