@@ -11,6 +11,7 @@
 #' @return NULL
 #' @examples \dontrun{
 #' # do not run this
+#' # needs my_theme already in .env
 #' library(survival)
 #' s = survfit(Surv(time, status) ~ 1, data = lung)
 #' figure <- proc_kmcurve2(s = s, xlab = "follow-up", ylab = "proportion surviving",
@@ -21,7 +22,7 @@
 proc_kmcurve1 <- function(s,xlab,ylab,color){
   require(ggplot2)
   require(broom)
-  require(my_theme)
+
   df <- tidy(s) # get the tidy summary suvfit object
   finalt <- max(df$time) # maximum time set for graph
   # start preparing the graph
