@@ -23,6 +23,8 @@
 proc_km_label2 <- function(s,xlab,ylab,times){
   require(ggplot2)
   require(broom)
+  require(survival)
+  require(ggrepel)
 
 
   df <- broom::tidy(s) # get the tidy summary suvfit object
@@ -37,14 +39,6 @@ proc_km_label2 <- function(s,xlab,ylab,times){
   g2
 
 
-
-  proc_percent <- function(x){
-    y <- round((x*100),2)
-    y
-  }
-
-
-
   t <- summary(s,times = times)
 
   times2 <- t$time
@@ -54,9 +48,9 @@ proc_km_label2 <- function(s,xlab,ylab,times){
 
   strata <- t$strata
 
-  df2 <- data.frame(times, surv, strata)
+  df2 <- data.frame(times2, est, strata)
 
-  g3 <- g2 + geom_label(data = df2, aes(x = times2, y = values,
+  g3 <- g2 + geom_label_repel(data = df2, aes(x = times2, y = values,
                                         label = est))
 
   g3
