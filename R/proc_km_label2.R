@@ -54,5 +54,5 @@ proc_km_label2 <- function(s,xlab,ylab,times){
                                         label = est))
 
   g3
-
+# code finished
 }
